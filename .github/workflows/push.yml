@@ -18,8 +18,8 @@ jobs:
       - name: Login to Docker
         uses: docker/login-action@v1
         with:
-          username: ${{ sectets.DOCKER_HUB_USERNAME }}
-          password: ${{ sectets.DOCKER_HUB_PASSWORD}}
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_PASSWORD}}
 
       - name: Build and push docker image
         uses: docker/build-push-action@v2
