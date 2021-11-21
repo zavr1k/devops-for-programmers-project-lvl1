@@ -15,4 +15,4 @@ make ci
 ```
 
 ### Dockerhub image
-[ssant/hexlet-devops-lvl1](https://hub.docker.com/repository/docker/ssant/hexlet-devops-lvl1)
+[ssant/hexlet-devops-lvl1](https://hub.docker.com/r/ssant/hexlet-devops-lvl1)
