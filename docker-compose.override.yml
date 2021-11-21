@@ -9,7 +9,7 @@ services:
       - ./app:/app
     ports:
       - "8080:8080"
-    command: npm run dev
+    command: ["bash", "-c", "sleep 3s && npm run dev"]
 
   caddy:
     image: caddy:2.4.6
