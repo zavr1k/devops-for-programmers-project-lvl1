@@ -6,6 +6,12 @@ services:
       context: .
       dockerfile: Dockerfile.production
     image: ssant/hexlet-devops-lvl1
+    environment:
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_USERNAME: ${DATABASE_USERNAME}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE_PORT: ${DATABASE_PORT}
     command: ["npm", "test"]
     depends_on:
       - db
