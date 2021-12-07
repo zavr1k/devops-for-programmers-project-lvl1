@@ -13,6 +13,6 @@ prepare:
 ci: prepare
 	docker-compose -f docker-compose.yml up --abort-on-container-exit
 compose-dev:
-	docker-compose -f docker-compose.yml up
+	docker-compose up
 
-.PHONY: compose compose-down ci compose-dev compose-build
+.PHONY: compose compose-down ci compose-dev compose-build prepare
