@@ -1,3 +1,9 @@
+compose:
+	docker-compose up -d
+compose-build:
+	docker-compose build
+compose-logs:
+	docker-compose logs -f
 compose-down:
 	docker-compose down || true
 compose-stop:
@@ -6,7 +12,7 @@ prepare:
 	cp -n .env.example .env || true
 ci: prepare
 	docker-compose -f docker-compose.yml up --abort-on-container-exit
-dev:
-	docker-compose up
+compose-dev:
+	docker-compose -f docker-compose.yml up
 
-.PHONY: compose-down compose-stop ci dev prepare
+.PHONY: compose compose-down ci compose-dev compose-build
