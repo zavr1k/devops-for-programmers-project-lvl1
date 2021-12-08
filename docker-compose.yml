@@ -12,7 +12,7 @@ services:
       - DATABASE_PASSWORD
       - DATABASE_HOST
       - DATABASE_PORT
-    command: ["bash", "-c", "sleep 3s && npm test"]
+    command: ["bash", "-c", "sleep 4s && npm test"]
     depends_on:
       - db
 
